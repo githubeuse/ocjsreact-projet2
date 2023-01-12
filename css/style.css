@@ -1,0 +1,575 @@
+/* version bureau/desktop : largeur de l’écran 992px à 1400px max
+version tablette : largeur de l’écran de 769px à 991px
+version mobile : largeur de l’écran < 768px  */
+
+
+/* import de la police Raleway dans deux épaisseurs*/
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+/*ajout de variables de couleurs à la racine*/
+:root {
+    --grey: #f2f2f2;
+    --lblue: #deebff;
+    --dblue: #0065fc;
+}
+
+/*Configuration des éléments par défaut de la page : largeur max 1400px, contenu centré, police raleway*/
+body {
+    max-width: 1400px;
+    font-family: Raleway;
+    margin-right: 30px;
+    margin-left: 30px;
+    margin: auto;
+}
+
+
+
+
+/* Configuration de la taille de police, gras, et fond gris /*
+ 
+/*Stylisation h1 et h3*/
+h1,
+h3 {
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+/*Stylisation h2 et p*/
+h2,
+p {
+    font-weight: normal;
+    font-size: 1em;
+    margin: 0.5em 0 0.5em 0;
+}
+
+/* Configuration de la taille des titres H4 */
+h4 {
+    font-size: 1em;
+    font-weight: 700;
+    margin: 0.5em 0 0.5em 0;
+}
+
+/* Configuration du fond gris */
+.greyBg {
+    background-color: var(--grey);
+    border-radius: 20px;
+    padding: 10px 40px;
+}
+
+/* Configuration de gras */
+.b {
+    font-weight: bold;
+}
+
+
+/* Configuration d'une marge haute de 30px*/
+.margin30px {
+    margin-top: 30px;
+}
+
+/* Configuration d'une marge à 0 */
+.nomargintop {
+    margin-top: 0px;
+}
+
+
+
+
+/*Stylisation des liens*/
+.linkblack a:link {
+    color: black;
+    text-decoration: none;
+}
+
+
+
+
+/* ICONES */
+/*Configuration couleur bleue par défaut aux icônes*/
+i {
+    color: var(--dblue);
+    padding-bottom: 0.5em;
+}
+
+/*Configuration de l'icône information, espace, couleur, bordure, bords arrondies*/
+main p i {
+    border: 1px solid var(--grey);
+    border-radius: 25px;
+    padding: 10px 15px;
+}
+
+/* Configuration de l'icône gps, couleur, espace, fond, bordures arrondies */
+header div>i {
+    background-color: var(--grey);
+    padding-left: 10px;
+    padding-right: 10px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    padding-top: 17px;
+}
+
+/* Classe attribuant une couleurs grise aux icônes : ici les étoiles non attribuées*/
+.greyico {
+    color: var(--grey);
+}
+
+
+
+/* FLEX */
+/* Classe row et row2 : fixe display en flex, et fixe une direction en ligne*/
+.row,
+.row2 {
+    display: flex;
+    flex-direction: row;
+}
+
+
+/* classe vertical align : baseline */
+.baseline {
+    align-items: baseline;
+    margin-top: 30px;
+}
+
+/* classe vertical align : center */
+.verticalcenter {
+    align-items: center;
+}
+
+
+/* Classe spacebtw : fixe un justify-content en spacebetween*/
+.spacebtw {
+    justify-content: space-between;
+}
+
+/*Classe spacevnly : fixe un justify content en space evenly */
+.spacevnly {
+    justify-content: space-evenly;
+}
+
+/*Classe flexstart : fixe un justify content en flexstart */
+.flexstart {
+    justify-content: flex-start;
+}
+
+
+
+/*CARD*/
+/* Classe configurant l'effet card */
+article {
+    background-color: white;
+    padding: 5px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    margin-bottom: 15px;
+}
+
+/* Configuration de la taille de l'image à l'intérieur des cards dans la colonne de gauche, hébergement */
+img {
+    width: 16vw;
+    height: 15vh;
+    border-radius: 20px 20px 0px 0px;
+    object-fit: cover;
+}
+
+
+
+/* Stylisation de la taille des images, colonne droite, hébergement */
+aside article img {
+    width: 5vw;
+    object-fit: cover;
+    border-radius: 20px 0px 0px 20px;
+    padding: 0px;
+}
+
+
+
+/*Configuration de la taille de l'image dans la zone activités - bas */
+.h50vh {
+    height: 50vh;
+    object-fit: cover;
+    border-radius: 20px 20px 0px 0px;
+}
+
+article h4,
+article p,
+article i:first-of-type {
+    margin-left: 0.5em;
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
+}
+
+
+
+
+/* ENTÊTE */
+/* Logo entête : Configuration taille, object fit contain et distance à 44px du haut */
+#logo {
+    width: 61px;
+    height: 29px;
+    object-fit: contain;
+    padding-top: 44px;
+}
+
+
+
+/* Menu entête : Attribution de couleur noire aux liens non visités & visités */
+nav a:link,
+nav a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+/* Menu entête : Attribution de couleur bleue aux liens survolés & actifs */
+nav a:hover,
+nav a:active {
+    color: var(--dblue);
+    border-top: 2px solid var(--dblue);
+    padding-top: 48px;
+}
+
+nav a {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+
+
+
+/* Menu entête : retrait de la puce, configuration espace haut et droite */
+nav ul li {
+    list-style-type: none;
+    padding-top: 48px;
+    padding-right: 47px;
+}
+
+
+
+
+/* Entête : Configuration du bouton de recherche */
+header input[type=submit] {
+    background-color: var(--dblue);
+    border: 0px;
+    padding: 16px 10px;
+    color: white;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+/* Entête : Stylisation du formulaire de recherche */
+form input {
+    border: 2px solid var(--grey);
+    padding: 14px;
+    font-family: Raleway;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+/* Entête : Stylisation des filtres */
+button {
+    border: 2px solid var(--grey);
+    padding: 12px 20px 4px 20px;
+    border-radius: 25px;
+    background-color: white;
+    font-family: Raleway;
+    font-size: 18px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+/* Entête : Stylisation des filtres lors du survol*/
+button:hover,
+button:active {
+    border-color: var(--grey);
+    background-color: var(--lblue);
+}
+
+
+
+
+
+/* Largeur des colonnes hébergement */
+/* Classe pour la zone Gauche hébergement : fixation de la largeur */
+/*ancien nom : .vw60 */
+.largeurHébergementGauche {
+    min-width: 55vw;
+    max-width: 58vw;
+}
+
+/* Classe pour la zone Droite hébergement : fixation de la largeur */
+.largeurHébergementDroite {
+    min-width: 20vw;
+    max-width: 23vw;
+}
+
+
+
+
+
+
+
+/* FOOTER */
+/*Configuration du footer */
+footer {
+    display: flex;
+    flex-direction: row;
+    line-height: 2em;
+    background-color: var(--grey);
+    justify-content: space-between;
+    padding: 20px 80px;
+}
+
+/* suppression des pastilles dans les listes */
+footer ul li {
+    list-style-type: none;
+}
+
+/* Suppression de l'espace restant dans les listes */
+footer ul {
+    padding-inline-start: 0px;
+}
+
+/* Configuration de la couleur des liens non visités et visités dans le footer */
+footer a:link,
+a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+/* Configuration de la couleur des liens actifs et survolés dans le footer */
+footer ul li a:active,
+footer ul li a:hover {
+    color: var(--dblue);
+}
+
+
+
+
+
+/* VERSION TABLETTE */
+@media only screen and (max-width: 992px) and (min-width: 769px) {
+
+    /* Configuration body, fixation de la largeur à 90%*/
+    body {
+        min-width: 769px;
+        max-width: 992px;
+        padding-right: 30px;
+        margin-left: 30px;
+    }
+
+    /* Configuration d'un margin-right à 0, utilisé pour la nav ul li de droite*/
+    .nomarginrighttab {
+        padding-right: 0px;
+    }
+
+    /* fixation d'une margin 50px bottom */
+    .margin50px {
+        margin-bottom: 50px;
+    }
+
+    /* Configuration de la taille de l'image à l'intérieur des cards de la zone hébergement, anciennement colonne de gauche */
+    img {
+        width: 23vw;
+        height: 12vw;
+    }
+
+    /* Stylisation de la taille des images & taille de la card de la zone hébergement, ancienne colonne de droite */
+    aside article img {
+        width: 10vw;
+        height: 17vw;
+    }
+
+    aside article {
+        width: 24vw;
+    }
+
+    /*Configuration de la taille de l'image dans la zone activités - bas */
+    .h50vh {
+        width: 20vw;
+        height: 35vh;
+    }
+
+    /* Largeur des colonnes hébergement */
+    /* Classe pour la zone Gauche hébergement : fixation de la largeur */
+    .largeurHébergementGauche {
+        min-width: 85%;
+        max-width: 90%;
+    }
+
+    /* Classe pour la zone Droite hébergement : fixation de la largeur */
+    /*idem : version tablette */
+    /*anciennement vw30 */
+    .largeurHébergementDroite {
+        min-width: 85%;
+        max-width: 90%;
+    }
+
+    /*Classe pour basculer en spacebetween*/
+    .spacebtw-tab {
+        justify-content: space-between;
+    }
+
+    /*Passage du padding à 0 des cards activités, auparavant à 5 */
+    .sanspadding-tab {
+        padding: 0px;
+    }
+}
+
+
+/* row à row2 : passe de ligne à colonne version tablette */
+@media only screen and (max-width: 992px) {
+
+    /* passe le flex direction en colonne, plutôt qu'en row */
+    .row2 {
+        flex-direction: column;
+    }
+
+    .row3 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+
+/* VERSION MOBILE */
+@media only screen and (max-width: 768px) {
+
+    /* marge de 30px gauche et droite */
+    body {
+        max-width: 768px;
+        margin-right: 30px;
+        margin-left: 30px;
+    }
+
+    /* centrage du logo */
+    #logo {
+        display: block;
+        width: 70%;
+        margin: auto;
+    }
+
+    /* Configuration du fond gris */
+    .greyBg {
+        border-radius: 0px;
+    }
+
+    /* Suppression du fond gris en mobile */
+    .withoutGreyBg-mob {
+        background-color: transparent;
+    }
+
+    /* stylisation du nav lors du survol, version mobile */
+    nav a:hover,
+    nav a:active {
+        border-top: none;
+        border-bottom: 2px solid var(--dblue);
+        padding-bottom: 25px;
+    }
+
+    /* ajout d'une marge gauche et droite de 50px pour nav, version mobile*/
+    nav a {
+        padding-right: 50px;
+        padding-left: 50px;
+    }
+
+    /* Suppression de la marge gauche, padding top et bas des H4 et P dans les articles */
+    article h4,
+    article p {
+        margin-left: 0em;
+        padding-top: 0em;
+        padding-bottom: 0em;
+    }
+
+    /* Stylisation des filtres */
+    .flexwrap-mob {
+        flex-wrap: wrap;
+        align-content: flex-start;
+    }
+
+    /* Menu entête / version mobile : supression du padding pour le menu de l'entête */
+    nav ul li {
+        padding-top: 15px;
+        padding-right: 0px;
+    }
+
+    /* fixation du padding right à 0 */
+    nav {
+        padding-right: 0px;
+    }
+
+    /* suppression du padding par défaut de la liste non ordonnée */
+    nav ul {
+        padding-inline-start: 0px;
+    }
+
+    .sanspadding-mob {
+        padding: 0px;
+    }
+
+    /* mise en place d'un justify content en space around, utilisé pour le nav*/
+    .spacearound-mob {
+        justify-content: space-around;
+    }
+
+    /*mise en place d'un colum reverse */
+    .columnr-mob {
+        flex-direction: column-reverse;
+    }
+
+    /* met les éléments en colonne, plutôt qu'en ligne */
+    .column-mob {
+        flex-direction: column;
+    }
+
+    /*Configuration de la taille de l'image dans la zone activités - bas */
+    .h50vh {
+        width: 100%;
+        height: 20vh;
+    }
+
+    /* Configuration de la taille de l'image à l'intérieur des cards de la zone hébergement, anciennement colonne de gauche */
+    img {
+        width: 100%;
+        height: 21vh;
+    }
+
+    /* Stylisation de la taille des images & taille de la card de la zone hébergement, ancienne colonne de droite */
+    aside article img {
+        width: 24vw;
+        height: 21vh;
+    }
+
+    /*Passage du padding à 0 des cards activités, auparavant à 5 */
+    .sanspadding-tab {
+        padding: 0px;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+
+    /* Largeur des colonnes hébergement */
+    /* Classe pour la zone Gauche hébergement : fixation de la largeur */
+    .largeurHébergementGauche {
+        max-width: 90%;
+    }
+
+    /* Classe pour la zone Droite hébergement : fixation de la largeur */
+    /*idem : version tablette */
+    /*anciennement vw30 */
+    .largeurHébergementDroite {
+        min-width: 85%;
+        max-width: 90%;
+    }
+
+    .margin30bottom-mob {
+        margin-bottom: 30px;
+    }
+
+    /* Ajout d'un padding pour le h4 zone activités, en version mobile */
+    .paddingh4-mob {
+        padding: 0.5em 0.5em;
+    }
+
+}
